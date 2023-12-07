@@ -31,7 +31,7 @@ class CycleAdmin(admin.ModelAdmin):
 
 @admin.register(ModelBooks)
 class ModelBooksAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'year', 'time_create', 'time_update', 'is_published')
+    list_display = ('title', 'id_old', 'slug', 'year', 'time_create', 'time_update', 'is_published')
     prepopulated_fields = {'slug': ('title',)}
 
 @admin.register(UserBookRating)
