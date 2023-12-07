@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="start" />
+    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="python manage.py startapp torrent">
+      <change afterPath="$PROJECT_DIR$/Audiobooks/downloading_new_books.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/general_utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,10 +33,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Python/django/AudiobooksTorrents",
+    "last_opened_file_path": "D:/Python/django/AudiobooksTorrents/Audiobooks/torrent",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent" />
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,11 +60,20 @@
       <option name="project" value="LOCAL" />
       <updated>1701965297925</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="python manage.py startapp torrent">
+      <option name="closed" value="true" />
+      <created>1701965846169</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701965846169</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="python manage.py startapp torrent" />
+    <option name="LAST_COMMIT_MESSAGE" value="python manage.py startapp torrent" />
   </component>
 </project>
