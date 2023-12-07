@@ -17,7 +17,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 def main():
     # Первичная загрузка категорий и жанров
-    populate_categories_and_subcategories()
+    # populate_categories_and_subcategories()
 
     start_id = 1  # начальный id
     end_id = 99   # конечный id
