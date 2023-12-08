@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="Book with id_old 1-99 successfully saved">
+    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="процесс необходим для работы в отладочном режиме">
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AudiobooksTorrents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AudiobooksTorrents.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +26,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Python/django/AudiobooksTorrents&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Python/django/AudiobooksTorrents/Audiobooks/torrent",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent" />
@@ -132,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701967049073</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="процесс необходим для работы в отладочном режиме">
+      <option name="closed" value="true" />
+      <created>1701993215647</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701993215647</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,6 +148,7 @@
     <MESSAGE value="python manage.py startapp torrent" />
     <MESSAGE value="utilities.py" />
     <MESSAGE value="Book with id_old 1-99 successfully saved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Book with id_old 1-99 successfully saved" />
+    <MESSAGE value="процесс необходим для работы в отладочном режиме" />
+    <option name="LAST_COMMIT_MESSAGE" value="процесс необходим для работы в отладочном режиме" />
   </component>
 </project>
