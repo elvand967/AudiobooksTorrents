@@ -19,8 +19,14 @@ def main():
     # Первичная загрузка категорий и жанров
     # populate_categories_and_subcategories()
 
-    start_id = 1  # начальный id
-    end_id = 99   # конечный id
+    print(f"{' Загрузка из `database_books.db` ':-^50}\n")
+    stop = input('Для продолжения нажмите любую клавишу,\nдля остановки нажмите "Q" ')
+    if stop.upper() == "Q" or stop.upper() == "Й":
+        return
+    start_id = int(input("начальный id: "))
+    end_id = int(input("конечный id: "))
+    if start_id > end_id:
+        end_id = start_id
     books_data = get_books_all_data(start_id, end_id)
     save_books_data(books_data)
 

@@ -19,7 +19,13 @@ import shutil
 
 
 
+
+
 def main():
+    print(f"{' Резервное копирование базы данных ':.^50}\n")
+    stop = input('Для продолжения нажмите любую клавишу,\nдля остановки нажмите "Q" ')
+    if stop.upper() == "Q" or stop.upper() == "Й":
+        return
     # Резервная копия Базы данных
     database_backup()
 
