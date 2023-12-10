@@ -21,11 +21,14 @@ from django.conf.urls.static import static
 
 from django.urls import path, include
 
+from torrent.views import page_not_found
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('torrent.urls')),
 ]
 
+handler404 = page_not_found
 
 
 # процесс необходим для работы в отладочном режиме

@@ -1,0 +1,26 @@
+<!--D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent\index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<p >{{ menu|join:" | " }}</p>
+<h1>{{ title }}</h1>
+<ul>
+    {% for book in books %}
+    <li>
+        <h2>{{book.title}}</h2>
+        <h3>{{book.author}}</h3>
+        <p>{{book.genre}}</p>
+        <p>{{book.description}</p>
+        <hr>
+    </li>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
