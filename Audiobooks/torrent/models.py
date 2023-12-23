@@ -175,27 +175,6 @@ class ModelBooks(models.Model):
 
         super().save(*args, **kwargs)
 
-    # def save(self, *args, **kwargs):
-    #     # Приозведена загрузка из db_old
-    #     if self.id_old:
-    #         # формируем имя вложенных директорий
-    #         self.subdirectory = str(self.id_old//1000)
-    #
-    #         # Формируем путь для торрент-файла если его нет
-    #         if self.name_torrent and not self.torrent:
-    #             torrent_path = os.path.join('folder_files\\files_torrent', self.subdirectory, self.name_torrent)
-    #             if os.path.exists(torrent_path):
-    #                 self.torrent = torrent_path
-    #
-    #         # Формируем путь для файла-картинки если его нет
-    #         if self.name_picture and not self.picture:
-    #             picture_path = os.path.join('folder_files\\files_picture', self.subdirectory, self.name_picture)
-    #             if os.path.exists(picture_path):
-    #                 self.picture = picture_path
-    #
-    #     super().save(*args, **kwargs)
-
-
     class Meta:
         verbose_name = 'Аудиокнига'
         verbose_name_plural = 'Аудиокниги'  # уточнить названия

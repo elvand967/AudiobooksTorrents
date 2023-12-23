@@ -1,26 +1,21 @@
 <!--D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent\index.html-->
+{% extends 'torrent/base.html' %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-<p >{{ menu|join:" | " }}</p>
-<h1>{{ title }}</h1>
 <ul>
     {% for book in books %}
+    {% if book.is_published %}
     <li>
         <h2>{{book.title}}</h2>
         <h3>{{book.author}}</h3>
         <p>{{book.genre}}</p>
-        <p>{{book.description}</p>
-        <hr>
+        <p>{{book.description|linebreaks|truncatewords:30}}</p>
+        <p ><a href="{% url 'details' book.id %}">Подробнее</a></p>
+        {% if not forloop.last %}
+            <hr>
+        {% endif %}
     </li>
+    {% endif %}
     {% endfor %}
-
 </ul>
-
-</body>
-</html>
+{% endblock %}

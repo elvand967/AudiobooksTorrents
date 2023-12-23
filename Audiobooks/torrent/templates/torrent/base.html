@@ -1,34 +1,203 @@
+{% load static %}
+{% load torrent_tags %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="base.css">
-    <!-- Adaprive CSS -->
-    <!-- <link rel="stylesheet" href="adaptive.css"> -->
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="responsive.css">
-    <title>Responsive Design</title>
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'torrent/css/style_base.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'torrent/css/style_iconsfont.css' %}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{% static 'torrent/images/main.ico' %}" type="image/x-icon"/>
+    <meta name="description" content="Описание вашего сайта">
+    <meta name="keywords" content="ключевые, слова, вашего, сайта">
 </head>
 
 <body>
-    <div class="container">
-         <!-- Header Section -->
-        <div class="header"></div>
-        <div class="services">
-            <div class="service"></div>
-            <div class="service"></div>
-            <div class="service"></div>
-            <div class="service"></div>
+<div class="wrapper">
+    <header>
+        <div class="grid_header">
+            <div class="logo_nav_logo">
+                <a href="/" id="top">
+                    <img src="{% static 'torrent/images/logo.png' %}" alt="logo" class="main-logo">
+                </a>
+            </div>
+            <div class="logo_nav_nav">
+                <div class="header-menu-bar">
+                    <i class="menu-bar-icon fa-solid fa-bars"></i>
+                </div>
+                <nav class="header-nav-left">
+                    <ul>
+                        {% get_horizontal_menu as horizontal_menu %}
+                        {% for item in horizontal_menu %}
+                        <li class="header-link">
+                            <a class="nav-link" href="{% url item.url_name %}" title="{{ item.link_hint }}">
+                                {{ item.title }}</a>
+                            {% if not forloop.last %} | {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <nav class="header-nav-right">
+                    <ul>
+                        <li><a href="#" class="header-link">Вход |</a></li>
+                        <li><a href="#" class="header-link">Регистрация</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="background_header"></div>
+            <div class="search_header">
+                <form name="search" action="/base.html" method="post" onsubmit="submitForm(event)">
+                    <ul>
+                        <li><span>Поиск <sub><i>(и - или)</i></sub></span></li>
+                        <li><input type="text" name="book" placeholder="Введите название книги" id="firstname"
+                                   oninput="updateSearchButton()"/>
+                        </li>
+                        <li><input type="text" name="cycle" placeholder="Введите название цикла" id="surname"
+                                   oninput="updateSearchButton()"/>
+                        </li>
+                        <li><input type="text" name="author" placeholder="Введите имя автора" id="lastname"
+                                   oninput="updateSearchButton()"/></li>
+                        <li><input type="text" name="reader" placeholder="Введите имя чтеца" id="lastname"
+                                   oninput="updateSearchButton()"/></li>
+                    </ul>
+                    <div class="block_actions">
+                        <button type="reset" name="reset" onclick="updateSearchButton(true)" disabled>Сброс</button>
+                        <button type="submit" name="submit" onclick="updateSearchButton()" disabled>Искать</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="filter_books">
+                <form name="ratings" method="get">
+                    <ul>
+                        <li>
+                            <label for="id_likes" title="лайки"><i class="icon-thumbs-up"></i></label>
+                            <select name="likes" id="id_likes" onchange="updateResetButton('ratings')">
+                                <option value="" selected>лайки</option>
+                                <option value="asc">лайки &#9650;<!-- up arrow --></option>
+                                <option value="desc">лайки &#9660;<!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="id_dislike" title="дизлайки"><i class="icon-thumbs-down"></i></label>
+                            <select name="dislike" id="id_dislike" onchange="updateResetButton('ratings')">
+                                <option value="" selected>дизлайки</option>
+                                <option value="asc">дизлайки &#9650; <!-- up arrow --></option>
+                                <option value="desc">дизлайки &#9660; <!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="id_plot" title="сюжет"><i class="icon-photo-film"></i></label>
+                            <select name="plot" id="id_plot" onchange="updateResetButton('ratings')">
+                                <option value="" selected>сюжет</option>
+                                <option value="asc">сюжет &#9650; <!-- up arrow --></option>
+                                <option value="desc">сюжет &#9660; <!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="id_writing_talent" title="писательский талант"><i
+                                    class="icon-pen-to-square"></i></i></label>
+                            <select name="writing_talent" id="id_writing_talent"
+                                    onchange="updateResetButton('ratings')">
+                                <option value="" selected>писательский талант</option>
+                                <option value="asc">писательский талант &#9650; <!-- up arrow --></option>
+                                <option value="desc">писательский талант &#9660; <!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="id_characters" title="персонажи"><i class="icon-people-robbery"></i></label>
+                            <select name="characters" id="id_characters" onchange="updateResetButton('ratings')">
+                                <option value="" selected>персонажи</option>
+                                <option value="asc">персонажи &#9650; <!-- up arrow --></option>
+                                <option value="desc">персонажи &#9660; <!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="id_voice_quality" title="качество озвучивания"><i
+                                    class="icon-volume-low"></i></label>
+                            <select name="voice_quality" id="id_voice_quality"
+                                    onchange="updateResetButton('ratings')">
+                                <option value="" selected>озвучивание</option>
+                                <option value="asc">озвучивание &#9650; <!-- up arrow --></option>
+                                <option value="desc">озвучивание &#9660; <!-- down arrow --></option>
+                            </select>
+                        </li>
+                        <!-- Добавьте аналогичные блоки для других фильтров -->
+                        <li>
+                            <button type="reset" name="reset" onclick="updateResetButton('ratings')"
+                                    disabled>Сброс
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- <div class="block_actions">
+                            <button type="submit">Применить фильтры</button>
+                        </div> -->
+                </form>
+            </div>
         </div>
-        <div class="projects">
-            <div class="proj"></div>
-            <div class="proj"></div>
-            <div class="proj"></div>
-        </div>
-    </div>
+    </header>
+    <aside class="aside_L">
+        <nav>
+            <ul>
+                <li>Фантастика &#9650;</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+                <li>Фантастика</li>
+            </ul>
+        </nav>
+        <article class="general_chat">общий чат</article>
+    </aside>
+    <main>
+        <article>
+            <section class="advertising1">реклама1</section>
+            <section>карточка книги 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque tempora quas,
+                consequuntur voluptate qui nobis accusamus eligendi saepe obcaecati exercitationem, provident odit.
+                Distinctio suscipit illo voluptate inventore nam officiis sapiente unde aut fuga iusto, sunt, odit
+                eum id nostrum natus. Cum mollitia error itaque commodi! Cum similique ratione
+                molestias fugiat, distinctio similique non totam possimus reiciendis.
+                Praesentium.
+                <hr>
+            </section>
+        </article>
+
+        {% block content %}{% endblock %}
+
+
+    </main>
+    <aside class="aside_R">
+        <article>реклама 1</article>
+        <article>общий чат</article>
+        <article>реклама 2</article>
+    </aside>
+    <footer>
+        <a href="#top" id="botton"><i class="icon-circle-chevron-up"></i></a>
+        <p>подвал Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perferendis A molestiae rerum
+            odio ab dolorem
+            reprehenderit harum magnam similique voluptas.</p>
+
+    </footer>
+</div>
+<script src="{% static 'torrent/js/base.js' %}"></script>
 </body>
 
 </html>

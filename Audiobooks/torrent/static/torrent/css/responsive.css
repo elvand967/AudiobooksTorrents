@@ -1,0 +1,66 @@
+.container {
+    max-width: 100%;
+}
+
+.header {
+    background-color: #E2ADF2;
+    width: 100%;
+}
+
+.services {
+    width: 100%;
+}
+
+.sidebar_left{
+    width: 200px;
+}
+.central_panel{
+    width: 800px;
+}
+.sidebar_right{
+    width: 200px;
+}
+
+
+
+.proj {
+    width: 32%;
+    background-color: #ffb549
+}
+
+
+/* 1000px */
+@media only screen and (max-width: 1000px) {
+    .sidebar_left{
+        width: 200px;
+    }
+    .central_panel{
+        width: 800px;
+    }
+    .sidebar_right{
+        width: 200px;
+    }
+    
+    .proj {
+        width: 90%;
+        background-color: #ffb549
+    }
+}
+
+/* 600px */
+@media only screen and (max-width: 600px) {
+    .sidebar_left{
+        width: 30%;
+    }
+    .central_panel{
+        width: 30%;
+    }
+    .sidebar_right{
+        width: 30%;
+    }
+    
+    .proj {
+        width: 90%;
+        background-color: #ffb549
+    }
+}

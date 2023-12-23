@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="print(f&quot;{' Заголовок ':.^50}\n&quot;)">
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/converters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/index.html" afterDir="false" />
+    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="учебный материал">
+      <change afterPath="$PROJECT_DIR$/Audiobooks/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/templates/base_old.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/adaptive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/download_torrent.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/main.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/custom_tag/list_categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/includes/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/torrent_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/views.py" afterDir="false" />
     </list>
@@ -22,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -48,11 +62,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\static\torrent\css" />
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\static\torrent\images" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates" />
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent" />
     </key>
   </component>
   <component name="RunManager" selected="Python.AudiobooksTorrents">
@@ -141,14 +159,60 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="temp_cat (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AudiobooksTorrents" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audiobooks/torrent" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Audiobooks/torrent/temp_cat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp_cat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AudiobooksTorrents" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audiobooks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\temp_cat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.AudiobooksTorrents" />
-      <item itemvalue="Python.temp" />
       <item itemvalue="Python.downloading_new_books" />
       <item itemvalue="Python.general_utilities" />
+      <item itemvalue="Python.temp" />
+      <item itemvalue="Python.temp_cat (1)" />
+      <item itemvalue="Python.temp_cat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.temp_cat (1)" />
+        <item itemvalue="Python.temp_cat" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.general_utilities" />
         <item itemvalue="Python.downloading_new_books" />
@@ -220,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702064999456</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="учебный материал">
+      <option name="closed" value="true" />
+      <created>1702241672047</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702241672047</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -231,6 +303,7 @@
     <MESSAGE value="процесс необходим для работы в отладочном режиме" />
     <MESSAGE value="Маршрутизация и функции представления" />
     <MESSAGE value="print(f&quot;{' Заголовок ':.^50}\n&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="print(f&quot;{' Заголовок ':.^50}\n&quot;)" />
+    <MESSAGE value="учебный материал" />
+    <option name="LAST_COMMIT_MESSAGE" value="учебный материал" />
   </component>
 </project>
