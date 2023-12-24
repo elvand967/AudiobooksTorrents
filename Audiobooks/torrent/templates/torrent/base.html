@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
     <link type="text/css" href="{% static 'torrent/css/style_base.css' %}" rel="stylesheet"/>
     <link type="text/css" href="{% static 'torrent/css/style_iconsfont.css' %}" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
@@ -31,10 +31,10 @@
                 </div>
                 <nav class="header-nav-left">
                     <ul>
-                        {% get_horizontal_menu as horizontal_menu %}
-                        {% for item in horizontal_menu %}
+                        {% horizontal_menu as menu %}
+                        {% for item in menu %}
                         <li class="header-link">
-                            <a class="nav-link" href="{% url item.url_name %}" title="{{ item.link_hint }}">
+                            <a class="header-link" href="{% url item.url_name %}" title="{{ item.link_hint }}">
                                 {{ item.title }}</a>
                             {% if not forloop.last %} | {% endif %}
                         </li>
@@ -43,8 +43,14 @@
                 </nav>
                 <nav class="header-nav-right">
                     <ul>
-                        <li><a href="#" class="header-link">Вход |</a></li>
-                        <li><a href="#" class="header-link">Регистрация</a></li>
+                        {% menu_users user as menu %}
+                        {% for item in menu %}
+                        <li class="header-link">
+                            <a class="header-link" href="{% url item.url_name %}" title="{{ item.link_hint }}">
+                                {{ item.title }}</a>
+                            {% if not forloop.last %} | {% endif %}
+                        </li>
+                        {% endfor %}
                     </ul>
                 </nav>
             </div>
@@ -170,6 +176,14 @@
     <main>
         <article>
             <section class="advertising1">реклама1</section>
+        </article>
+
+        {% block content %}{% endblock %}
+
+
+    </main>
+    <aside class="aside_R">
+        <article>
             <section>карточка книги 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque tempora quas,
                 consequuntur voluptate qui nobis accusamus eligendi saepe obcaecati exercitationem, provident odit.
                 Distinctio suscipit illo voluptate inventore nam officiis sapiente unde aut fuga iusto, sunt, odit
@@ -179,15 +193,6 @@
                 <hr>
             </section>
         </article>
-
-        {% block content %}{% endblock %}
-
-
-    </main>
-    <aside class="aside_R">
-        <article>реклама 1</article>
-        <article>общий чат</article>
-        <article>реклама 2</article>
     </aside>
     <footer>
         <a href="#top" id="botton"><i class="icon-circle-chevron-up"></i></a>

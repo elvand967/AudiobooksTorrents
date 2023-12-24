@@ -7,10 +7,18 @@ register_converter(converters.FourDigitYearConverter, "year4")
 
 urlpatterns = [
     path('', views.index, name='home'),  # http://127.0.0.1:8000/
-    path('general_chat/', views.general_chat, name='general_chat'),
     path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
+    path('fag/', views.fag, name='fag'),
+    path('feedback/', views.feedback, name='feedback'),
+    path('chat/', views.chat, name='chat'),
     path('login/', views.login, name='login'),
+    path('register/', views.register_user, name='register'),
+    path('profile/', views.profile, name='profile'),
+    path('logout/', views.index, name='logout'),
+
+
+
+    # path('contact/', views.contact, name='contact'),
     path('details/<int:det_id>/', views.details, name='details'),
     path('genres/<slug:genres_slug>/', views.genres, name='genres'),
     path('cat/<slug:cat_slug>/', views.categories, name='categories'),

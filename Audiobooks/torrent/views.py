@@ -84,12 +84,45 @@ data_db = [
 
 
 def index(request):
+    # user = request.user
     data = {
         'title': 'Аудиокниги с книжной полки',
         'books': data_db,
         'cat_selected': 0,   # не обязательная строчка
+        # 'user': user,
     }
     return render(request, 'torrent/index.html', context=data)
+
+
+def about(request):
+    data = {
+        'title': 'О сайте',
+        'text': 'На этой странице информация о сайте',
+    }
+    return render(request, 'torrent/about.html', context=data)
+
+
+def fag(request):
+    data = {
+        'title': 'FAG',
+        'text': 'Часто задаваемые вопросы',
+    }
+    return render(request, 'torrent/fag.html', context=data)
+
+def feedback(request):
+    data = {
+        'title': 'Обратная связь',
+        'text': 'Здесь должна быть форма обратной связи',
+    }
+    return render(request, 'torrent/feedback.html', context=data)
+
+
+def chat(request):
+    data = {
+        'title': 'Общий чат',
+        'text': 'Общий чат сайта',
+    }
+    return render(request, 'torrent/chat.html', context=data)
 
 
 def details(request, det_id):
@@ -103,7 +136,6 @@ def categories(request, cat_slug):
 def show_category(request, cat_id):
     data = {
         'title': 'Отображение по рубрикам',
-        'menu': menu,
         'posts': data_db,
         'cat_selected': cat_id,
     }
@@ -138,17 +170,31 @@ def page_not_found(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
 
 
-def general_chat(request):
-    return HttpResponse("<h1>Общий чат</h1>")
 
 
-def about(request):
-    return render(request, 'torrent/about.html', {'title': 'О сайте'})
 
 
-def contact(request):
-    return HttpResponse("<h1>Обратная связь</h1>")
+
 
 
 def login(request):
-    return HttpResponse("<h1>Авторизация</h1>")
+    data = {
+        'title': 'Вход',
+        'text': 'Форма входа',
+    }
+    return render(request, 'torrent/account/login.html', context=data)
+
+
+def register_user(request):
+    data = {
+        'title': 'Профиль',
+        'text': 'Профиль пользователя',
+    }
+    return render(request, 'torrent/account/register.html', context=data)
+
+def profile(request):
+    data = {
+        'title': 'Профиль',
+        'text': 'Профиль пользователя',
+    }
+    return render(request, 'torrent/account/profile.html', context=data)

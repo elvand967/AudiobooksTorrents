@@ -1,7 +1,8 @@
 <!--D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent\index.html-->
 {% extends 'torrent/base.html' %}
-{% block content %}
 
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
 <ul>
     {% for book in books %}
     {% if book.is_published %}

@@ -4,27 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="учебный материал">
-      <change afterPath="$PROJECT_DIR$/Audiobooks/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/templates/base_old.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/adaptive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/download_torrent.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/images/main.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/custom_tag/list_categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/includes/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/torrent_tags.py" afterDir="false" />
+    <list default="true" id="27de8e5b-acad-4e1e-81f2-f06c2e261252" name="Changes" comment="начало работы с base.html">
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/account/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/account/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/account/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/fag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/Audiobooks/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/style_base.css" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/static/torrent/css/style_base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templates/torrent/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/torrent_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/templatetags/torrent_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Audiobooks/torrent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audiobooks/torrent/views.py" afterDir="false" />
     </list>
@@ -50,22 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Python/django/ONLINEPROFITPRO.RU",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Python/django/AudiobooksTorrents/Audiobooks/torrent/templates/torrent&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent" />
+      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent\account" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\static\torrent\css" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\static\torrent\images" />
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent" />
-      <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Python\django\AudiobooksTorrents\Audiobooks\torrent\templates\torrent" />
@@ -292,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702241672047</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="начало работы с base.html">
+      <option name="closed" value="true" />
+      <created>1703369220855</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703369220855</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -304,6 +305,7 @@
     <MESSAGE value="Маршрутизация и функции представления" />
     <MESSAGE value="print(f&quot;{' Заголовок ':.^50}\n&quot;)" />
     <MESSAGE value="учебный материал" />
-    <option name="LAST_COMMIT_MESSAGE" value="учебный материал" />
+    <MESSAGE value="начало работы с base.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="начало работы с base.html" />
   </component>
 </project>
